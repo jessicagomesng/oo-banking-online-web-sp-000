@@ -11,7 +11,7 @@ class Transfer
 
   def valid?
     @sender.valid? && @receiver.valid?
-  end    
+  end
 
   def execute_transaction
     if valid? == false || @sender.balance < @amount
@@ -26,7 +26,7 @@ class Transfer
   end
 
   def reverse_transfer
-    @sender(@amount)
+    @sender.deposit(@amount)
     @receiver.deposit(-@amount)
   end
 
