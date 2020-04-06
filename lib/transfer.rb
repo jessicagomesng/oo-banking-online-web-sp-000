@@ -26,6 +26,8 @@ class Transfer
   end
 
   def reverse_transfer
+    @sender(@amount)
+    @receiver.deposit(-@amount)
   end
 
 end
