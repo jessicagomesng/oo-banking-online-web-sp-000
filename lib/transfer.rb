@@ -17,7 +17,7 @@ class Transfer
     if valid? == false
       @status = "rejected"
       "Transaction rejected. Please check your account balance."
-    elsif @sender.valid? == true && @counter == 0
+    else 
       @counter = @counter += 1
       @sender.deposit(-@amount)
       @receiver.deposit(@amount)
