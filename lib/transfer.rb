@@ -27,8 +27,8 @@ class Transfer
 
   def reverse_transfer
     if execute_transaction
-      @sender.deposit(@amount*2)
-      @receiver.deposit(-@amount*2)
+      @sender.deposit(@amount)
+      @receiver.deposit(-@amount)
       @status = "reversed"
     end
   end
